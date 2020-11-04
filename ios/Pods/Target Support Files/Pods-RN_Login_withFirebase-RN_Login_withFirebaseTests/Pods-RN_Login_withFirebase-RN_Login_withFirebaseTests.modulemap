@@ -1,0 +1,6 @@
+module Pods_RN_Login_withFirebase_RN_Login_withFirebaseTests {
+  umbrella header "Pods-RN_Login_withFirebase-RN_Login_withFirebaseTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
