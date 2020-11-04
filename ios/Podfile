@@ -31,3 +31,4 @@ target 'RN_Login_withFirebase-tvOS' do
     # Pods for testing
   end
 end
+pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
