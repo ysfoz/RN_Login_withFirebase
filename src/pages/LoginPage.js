@@ -3,12 +3,13 @@ import { StyleSheet,SafeAreaView, Text, View } from 'react-native'
 import auth from '@react-native-firebase/auth';
 
 
-import Input from './components/Input'
-import Button from './components/Button'
+
+import Input from '../components/Input'
+import Button from '../components/Button'
 
 
 
-const LoginPage = () => {
+const LoginPage = (props) => {
     const[email,setEmail] = React.useState('')
     const[password,setPassword] = React.useState('')
 
@@ -19,7 +20,7 @@ const LoginPage = () => {
 function signUp (){
     auth()
   .createUserWithEmailAndPassword(email, password)
-  .then((response) => {
+  .then(() => {
     console.log(response);
   })
   .catch(error => {
@@ -30,8 +31,8 @@ function signUp (){
 function signIn (){
     auth()
     .signInWithEmailAndPassword(email,password)
-    .then ((response)=> {
-        console.log(response)
+    .then ((res)=> {
+        res && props.navigation.navigate('Home')
     })
     .catch((error) => {
         console.log(error)})}
@@ -63,7 +64,10 @@ function signIn (){
                 BtnName = 'Sign Up'
                 onPress = {signUp()}
                 />
-            
+            <Button 
+            BtnName = 'ac'
+            onPress={() => props.navigation.navigate('Home') }
+            />
             </View>
            
         </SafeAreaView>
