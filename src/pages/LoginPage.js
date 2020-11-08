@@ -91,3 +91,5 @@ const styles = StyleSheet.create({
     }
 })
 
+// logın olduktan sonra navıgatıon ıle ıkıncı sayfaya bagladık 
+// simdi ikinici sayfa duzenlencek, firebase ile cloud tan foto atip onlari flat list yapsak olur
